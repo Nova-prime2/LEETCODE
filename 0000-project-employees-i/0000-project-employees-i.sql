@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select distinct p.project_id,round(avg(e.experience_years) over( partition by p.project_id),2) as average_years from Project p join Employee e on e.employee_id=p.employee_id ;
